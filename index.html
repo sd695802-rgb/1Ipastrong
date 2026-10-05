@@ -41,12 +41,41 @@
             gap: 20px;
             flex: 1;
         }
+        /* الأقسام بجانب بعضها أفقيًا */
+        .tabs-nav {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .tab-btn {
+            background-color: #1e293b;
+            color: #94a3b8;
+            border: 1px solid #334155;
+            padding: 10px 15px;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+            flex: 1;
+            text-align: center;
+        }
+        .tab-btn.active {
+            background-color: #0ea5e9;
+            color: white;
+            border-color: #0ea5e9;
+        }
         .section {
+            display: none;
             background-color: #1e293b;
             border-radius: 16px;
             padding: 20px;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             border: 1px solid #334155;
+        }
+        .section.active {
+            display: block;
         }
         .section h2 {
             font-size: 1.3rem;
@@ -120,8 +149,15 @@
 
     <div class="container">
         
+        <!-- أزرار الأقسام بجانب بعضها -->
+        <div class="tabs-nav">
+            <button class="tab-btn active" onclick="switchTab(event, 'apps')">📱 التطبيقات</button>
+            <button class="tab-btn" onclick="switchTab(event, 'signing')">✍️ برامج التوقيع</button>
+            <button class="tab-btn" onclick="switchTab(event, 'certs')">🛡️ الشهادات</button>
+        </div>
+
         <!-- القسم الأول: التطبيقات -->
-        <div class="section">
+        <div id="apps" class="section active">
             <h2>📱 التطبيقات</h2>
             <div class="items-list">
                 <div class="item-card">
@@ -136,7 +172,7 @@
         </div>
 
         <!-- القسم الثاني: برامج التوقيع -->
-        <div class="section">
+        <div id="signing" class="section">
             <h2>✍️ برامج التوقيع</h2>
             <div class="items-list">
                 <div class="item-card">
@@ -151,7 +187,7 @@
         </div>
 
         <!-- القسم الثالث: شهادات أبل -->
-        <div class="section">
+        <div id="certs" class="section">
             <h2>🛡️ شهادات أبل</h2>
             <div class="items-list">
                 <div class="item-card">
@@ -163,11 +199,26 @@
 
     </div>
 
-    <!-- رابط قناة التلغرام في الأسفل -->
+    <!-- قناة التلغرام وحدها في الأسفل تماماً -->
     <footer>
         <p style="margin-bottom: 15px; color: #94a3b8;">للانضمام إلى قناتنا ومتابعة كل جديد:</p>
         <a href="https://t.me/ipastrong" target="_blank" class="telegram-btn">انضم لقناة التلغرام 🚀</a>
     </footer>
+
+    <script>
+        function switchTab(evt, tabName) {
+            let sections = document.getElementsByClassName("section");
+            for (let i = 0; i < sections.length; i++) {
+                sections[i].classList.remove("active");
+            }
+            let buttons = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
 
 </body>
 </html>
