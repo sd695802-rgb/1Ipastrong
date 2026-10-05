@@ -22,80 +22,80 @@
         }
         header {
             text-align: center;
-            margin: 30px 0;
+            margin: 20px 0;
         }
         header h1 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             color: #38bdf8;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
         header p {
             color: #94a3b8;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
         .container {
             width: 100%;
-            max-width: 800px;
+            max-width: 600px;
             display: flex;
             flex-direction: column;
-            gap: 25px;
+            gap: 20px;
             flex: 1;
         }
         .section {
             background-color: #1e293b;
             border-radius: 16px;
-            padding: 20px 25px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             border: 1px solid #334155;
         }
         .section h2 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: #38bdf8;
             margin-bottom: 15px;
+            text-align: center;
             border-bottom: 2px solid #334155;
             padding-bottom: 8px;
         }
         .items-list {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 12px;
         }
         .item-card {
             background-color: #0f172a;
-            padding: 12px 15px;
-            border-radius: 10px;
+            padding: 14px 18px;
+            border-radius: 12px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: background 0.2s;
-        }
-        .item-card:hover {
-            background-color: #273548;
+            border: 1px solid #334155;
         }
         .item-name {
             font-size: 1rem;
-            color: #e2e8f0;
+            color: #f8fafc;
+            font-weight: 500;
+            text-align: right;
         }
         .btn {
             background-color: #0ea5e9;
             color: white;
-            padding: 6px 14px;
-            border-radius: 8px;
+            padding: 8px 18px;
+            border-radius: 10px;
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             font-weight: bold;
             transition: background 0.2s;
+            text-align: center;
         }
         .btn:hover {
             background-color: #0284c7;
         }
-        /* تصميم قسم قناة تلغرام في الأسفل */
         footer {
-            margin-top: 40px;
+            margin-top: 30px;
             text-align: center;
             padding: 20px;
             width: 100%;
-            max-width: 800px;
+            max-width: 600px;
             border-top: 1px solid #334155;
         }
         .telegram-btn {
@@ -105,14 +105,9 @@
             padding: 12px 25px;
             border-radius: 30px;
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: bold;
             box-shadow: 0 4px 10px rgba(34, 158, 217, 0.3);
-            transition: transform 0.2s, background 0.2s;
-        }
-        .telegram-btn:hover {
-            background-color: #1b85b8;
-            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -120,7 +115,7 @@
 
     <header>
         <h1>Fox1ipa</h1>
-        <p>موقعك المفضل لتطبيقات وأدوات آبل</p>
+        <p>متجر تطبيقات وأدوات آبل</p>
     </header>
 
     <div class="container">
@@ -130,11 +125,11 @@
             <h2>📱 التطبيقات</h2>
             <div class="items-list">
                 <div class="item-card">
-                    <span class="item-name">تطبيق تجريبي 1 (.ipa)</span>
+                    <span class="item-name">تطبيق تجريبي 1 <br><small style="color:#94a3b8;">(ipa.)</small></span>
                     <a href="#" class="btn">تحميل</a>
                 </div>
                 <div class="item-card">
-                    <span class="item-name">تطبيق تجريبي 2 (.ipa)</span>
+                    <span class="item-name">تطبيق تجريبي 2 <br><small style="color:#94a3b8;">(ipa.)</small></span>
                     <a href="#" class="btn">تحميل</a>
                 </div>
             </div>
@@ -160,15 +155,15 @@
             <h2>🛡️ شهادات أبل</h2>
             <div class="items-list">
                 <div class="item-card">
-                    <span class="item-name">الشهادة الحالية (متاحة)</span>
-                    <a href="#" class="btn">تثبيت الشهادة</a>
+                    <span class="item-name">الشهادة الحالية <br><small style="color:#22c55e;">(متاحة)</small></span>
+                    <a href="#" class="btn" style="background-color: #10b981;">تثبيت الشهادة</a>
                 </div>
             </div>
         </div>
 
     </div>
 
-    <!-- تذييل الصفحة ورابط القناة -->
+    <!-- رابط قناة التلغرام في الأسفل -->
     <footer>
         <p style="margin-bottom: 15px; color: #94a3b8;">للانضمام إلى قناتنا ومتابعة كل جديد:</p>
         <a href="https://t.me/ipastrong" target="_blank" class="telegram-btn">انضم لقناة التلغرام 🚀</a>
